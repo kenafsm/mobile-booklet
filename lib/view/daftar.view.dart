@@ -13,6 +13,7 @@ class DaftarView extends StatelessWidget {
         elevation: 0,
         foregroundColor: Colors.black,
         shadowColor: Color.fromARGB(235, 191, 216, 250),
+        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.person_2))],
       ),
       drawer: Sidebar(),
       body: GridView.count(

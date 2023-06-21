@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:mobile_booklet/view/sidebar.dart';
+import 'package:mobile_booklet/view/success.view.dart';
 
 class KembaliView extends StatelessWidget {
   KembaliView({super.key});
@@ -13,6 +14,7 @@ class KembaliView extends StatelessWidget {
         elevation: 0,
         foregroundColor: Colors.black,
         shadowColor: Color.fromARGB(235, 191, 216, 250),
+        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.person_2))],
       ),
       drawer: Sidebar(),
       body: SingleChildScrollView(
@@ -64,14 +66,18 @@ class KembaliView extends StatelessWidget {
                   // Text("Pengaduan :"),
                   TextField(
                     decoration: InputDecoration(
-                        hintText: "Data Diri",
+                        hintText: "Nama, NIM",
                         labelText: "Data Diri (Sesuai KTM)",
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                         )),
                   ),
                   Padding(padding: EdgeInsets.only(top: 20.0)),
-                  ElevatedButton(onPressed: () {}, child: Text('Kirim'))
+                  ElevatedButton(
+                      onPressed: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => SuccessView())),
+                      child: Text('Kirim'))
                 ],
               ),
             ],

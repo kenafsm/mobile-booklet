@@ -24,14 +24,14 @@ class Sidebar extends StatelessWidget {
                 .push(MaterialPageRoute(builder: (context) => DaftarView())),
           ),
           ListTile(
-            title: Text('Kolom Pengaduan'),
-            onTap: () => Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => PengaduanView())),
-          ),
-          ListTile(
             title: Text('Form Peminjaman'),
             onTap: () => Navigator.of(context)
                 .push(MaterialPageRoute(builder: (context) => FormView())),
+          ),
+          ListTile(
+            title: Text('Form Pengembalian'),
+            onTap: () => Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => KembaliView())),
           ),
           ListTile(
             title: Text('Verifikasi'),
@@ -39,9 +39,9 @@ class Sidebar extends StatelessWidget {
                 .push(MaterialPageRoute(builder: (context) => VerifView())),
           ),
           ListTile(
-            title: Text('Form Pengembalian'),
+            title: Text('Informasi Peminjaman'),
             onTap: () => Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => KembaliView())),
+                .push(MaterialPageRoute(builder: (context) => VerifView())),
           ),
           const SizedBox(
             height: 150,

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_booklet/view/home.view.dart';
-import 'package:mobile_booklet/view/register.view.dart';
+import 'package:mobile_booklet/view/login.view.dart';
 
-class LoginView extends StatefulWidget {
+class RegisterView extends StatefulWidget {
   @override
-  _LoginViewState createState() => _LoginViewState();
+  _RegisterViewState createState() => _RegisterViewState();
 }
 
-class _LoginViewState extends State<LoginView> {
+class _RegisterViewState extends State<RegisterView> {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext contex) {
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
@@ -30,6 +30,42 @@ class _LoginViewState extends State<LoginView> {
               const SizedBox(height: 10),
               TextFormField(
                 decoration: InputDecoration(
+                    hintText: 'Nama',
+                    filled: true,
+                    fillColor: Colors.black.withOpacity(0.1),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide.none,
+                      borderRadius: BorderRadius.circular(10),
+                    )),
+              ),
+
+              const SizedBox(height: 10),
+              TextFormField(
+                decoration: InputDecoration(
+                    hintText: 'NIM',
+                    filled: true,
+                    fillColor: Colors.black.withOpacity(0.1),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide.none,
+                      borderRadius: BorderRadius.circular(10),
+                    )),
+              ),
+
+              const SizedBox(height: 10),
+              TextFormField(
+                decoration: InputDecoration(
+                    hintText: 'Kelas',
+                    filled: true,
+                    fillColor: Colors.black.withOpacity(0.1),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide.none,
+                      borderRadius: BorderRadius.circular(10),
+                    )),
+              ),
+
+              const SizedBox(height: 10),
+              TextFormField(
+                decoration: InputDecoration(
                     hintText: 'E-mail',
                     filled: true,
                     fillColor: Colors.black.withOpacity(0.1),
@@ -43,7 +79,7 @@ class _LoginViewState extends State<LoginView> {
               const SizedBox(height: 10),
               TextFormField(
                 decoration: InputDecoration(
-                    hintText: 'Password',
+                    hintText: 'Password Baru',
                     filled: true,
                     fillColor: Colors.black.withOpacity(0.1),
                     border: OutlineInputBorder(
@@ -59,9 +95,9 @@ class _LoginViewState extends State<LoginView> {
                 height: 80,
                 child: ElevatedButton(
                   onPressed: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => HomeView())),
+                      MaterialPageRoute(builder: (context) => LoginView())),
                   child: Text(
-                    'Masuk',
+                    'Daftar',
                     style: TextStyle(
                       color: Colors.black,
                     ),
@@ -72,19 +108,19 @@ class _LoginViewState extends State<LoginView> {
                 ),
               ),
 
+              SizedBox(height: 10),
               Center(
                   child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Belum Punya Akun? '),
+                  Text('Sudah Punya Akun? '),
                   SizedBox(height: 10),
                   TextButton(
                       onPressed: () => Navigator.of(context).push(
-                          MaterialPageRoute(
-                              builder: (context) => RegisterView())),
+                          MaterialPageRoute(builder: (context) => LoginView())),
                       style: TextButton.styleFrom(
                           textStyle: TextStyle(fontSize: 15)),
-                      child: Text('Daftar')),
+                      child: Text('Login')),
                 ],
               )),
             ],

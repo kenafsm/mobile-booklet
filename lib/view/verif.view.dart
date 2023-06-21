@@ -32,6 +32,13 @@ class VerifView extends StatelessWidget {
                 ),
               ),
               Padding(padding: EdgeInsets.all(10)),
+              Center(
+                child: Text(
+                  "Peminjaman",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
+                ),
+              ),
+              Padding(padding: EdgeInsets.all(8)),
               Container(
                 margin: EdgeInsets.fromLTRB(15, 0, 0, 39),
                 padding: EdgeInsets.fromLTRB(3, 9, 6, 21),
@@ -42,6 +49,13 @@ class VerifView extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
+              Center(
+                child: Text(
+                  "Pengembalian",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
+                ),
+              ),
+              Padding(padding: EdgeInsets.all(8)),
               Container(
                 margin: EdgeInsets.fromLTRB(15, 0, 0, 39),
                 padding: EdgeInsets.fromLTRB(3, 9, 6, 21),
